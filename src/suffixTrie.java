@@ -1,11 +1,9 @@
 public class suffixTrie {
 	static final int d = 4;
-	int a = 0;
 
 	static class TrieNode {
 		TrieNode[] children = new TrieNode[d];
 		char key;
-		int level;
 
 		TrieNode() {
 			for (int i = 0; i < d; i++)
@@ -63,12 +61,13 @@ public class suffixTrie {
 			return;
 		}
 		for (int i = 0; i < d; i++) {
-			if (curr.children[i] != null) {
+			if (curr.children[i] != null) 
 				printInOrder(curr.children[i], s + curr.children[i].key);
-			} else
+			 else
 				return;
 		}
 
 	}
+
 
 }
